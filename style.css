@@ -14,7 +14,7 @@ body{
     display: flex;
 }
 #main-content-1,#main-content-2,#main-content-3{
-    width: 30%;
+    padding: 25px;
 }
 .flex{
     display: flex;
@@ -22,10 +22,21 @@ body{
 img{
     border-radius: 50%;
     margin: 0px 15px;
-
+}
+.line{
+    background-color: blue;
+    height: 2px;
+    width: 150px;
 }
 #main-content-1{
-    padding: 25px;
+    width: 25%;
+    background-color: rgb(237, 231, 231);
+}
+#main-content-2{
+width:45%;
+}
+#main-content-3{
+    width: 30%;
 }
 .down{
     margin-top: 30px;
@@ -39,9 +50,21 @@ img{
 .tr>*{
     margin: 5px;
 }
+.section{
+    padding: 25px;
+}
 .larger{
     font-size: 25px;
 }
 .bold{
     font-weight: bold;
+}
+.grey{
+    color: grey;
+}
+button{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
 }
