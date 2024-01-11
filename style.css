@@ -28,31 +28,48 @@ img{
     height: 2px;
     width: 150px;
 }
+
 #main-content-1{
     width: 25%;
     background-color: rgb(237, 231, 231);
 }
+
 #main-content-2{
-width:45%;
+    width:55%;
 }
+
 #main-content-3{
-    width: 30%;
+    width: 20%;
 }
+
 .down{
     margin-top: 30px;
 }
+
 .down >*{
     margin: 10px;
 }
+
 .tr{
     margin: 15px 0px;
 }
+
 .tr>*{
     margin: 5px;
 }
+
 .section{
     padding: 25px;
 }
+
+.info{
+    border: 2px solid blue;
+    border-top: 0;
+    border-right: 0;
+    border-bottom:0;
+    padding-left: 20px;
+}
+
 .larger{
     font-size: 25px;
 }
@@ -67,4 +84,16 @@ button{
     color: white;
     padding: 10px;
     border-radius: 10px;
+}
+.card{
+    background-color: gainsboro;
+    padding: 15px;
+    margin-bottom: 50px;
+}
+.card >*{
+    padding:5px;
+}
+#update{
+    margin: 10px 0px;
+    width: 100%;
 }

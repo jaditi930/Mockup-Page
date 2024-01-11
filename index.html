@@ -88,7 +88,7 @@
         </div>
 
         <div class="chart">
-
+            <canvas id="stackedChartID"></canvas> 
         </div>
 
         <div>
@@ -116,7 +116,7 @@
     <div id="main-content-3">
 
         <div class="card">
-            <div>Retirement Strartegy</div>
+            <div class="bold" style="margin-bottom: 20px;">Retirement Strartegy</div>
 
             <div>Employee Contribution</div>
 
@@ -134,28 +134,29 @@
 
             <div class="flex">
                 <div>Employer Contribution</div>
-                <div>8.4%</div>
+                <div style="margin-left: auto;">8.4%</div>
             </div>
 
             <div class="flex">
                 <div>Interest Rate</div>
-                <div>5%</div>
+                <div style="margin-left: auto;">5%</div>
             </div>
 
         <button id="update">Update</button>
-        <div>View help docs ></div>
+
+        <div style="color: blue;text-align: center;">View help docs ></div>
 
         </div>
 
         <div class="info">
             <div>Are you considering a <b>Housing Advance?</b></div>
             <div class="grey">Limited time reduced interest</div>
-            <div>Learn More ></div>
+            <div style="color: blue;">Learn More ></div>
         </div>
 
     </div>
 
     <script src=”https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js”>   </script> 
-
+    <script src="chart.js"></script>
 </body>
 </html>
