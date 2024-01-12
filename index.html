@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
+<body class="flex">
     <div id="side-bar">
 
     </div>
 
     <div id="main-content-1">
 
-        <div class="flex">
+        <div class="profile">
             <img src="./user.avif" alt="" width="50" height="50">
             <div>
                 <div class="larger bold">Hi Mike,</div>
@@ -29,11 +29,17 @@
         <div class="larger bold">$19,892</div>
         <div class="grey">Account Balance</div>
 
-        <div class="bold">$4,000</div>
-        <div class="grey">Year-to-Date Contributions</div>
+        <div class="section_flex">
+            <div>
+                <div class="bold">$4,000</div>
+                <div class="grey">Year-to-Date Contributions</div>
+            </div>
 
-        <div class="bold">$1,892</div>
-        <div class="grey">Total Interest</div>
+            <div>
+                <div class="bold">$1,892</div>
+                <div class="grey">Total Interest</div>
+            </div>
+        </div>
 
         <button>I want to <i class="fa-solid fa-caret-down"style="color:white;"></i></button>
 
@@ -65,24 +71,26 @@
         <div style="color: blue;" class="bold">Retirement Income</div>
         <div class="larger">Starting year 2056</div>
 
-        <div class="flex">
+        <div class="section2_flex">
 
-            <div class="section">
+            <div class="section" style="width: 100%;">
                 <div class="larger bold">$300,000</div>
                 <div class="grey">My Goal</div>
                 <div class="line"></div>
             </div>
 
-            <div class="section">
-                <div class="larger bold">59%</div>
-                <div class="grey">Goal Achieved</div>
-                <div class="line"></div>
-            </div>
+            <div class="flx">
+                <div class="section">
+                    <div class="larger bold">59%</div>
+                    <div class="grey">Goal Achieved</div>
+                    <div class="line"></div>
+                </div>
 
-            <div class="section">
-                <div class="larger bold">$300</div>
-                <div class="grey">Est. Monthly Income</div>
-                <div class="line"></div>
+                <div class="section">
+                    <div class="larger bold">K 300</div>
+                    <div class="grey">Est. Monthly Income</div>
+                    <div class="line"></div>
+                </div>
             </div>
 
         </div>
@@ -104,7 +112,7 @@
                     <div>Gender: Male</div>
                 </div>
 
-                <div class="progress flex space">
+                <div class="progress">
                     <span role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="--value: 78"></span>
                     <span role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="--value: 95"></span>
                     <span role="progressbar" aria-valuenow="59" aria-valuemin="0" aria-valuemax="100" style="--value: 59"></span>
@@ -125,24 +133,24 @@
 
             <div class="flex">
                 <input type="range" name="range-1" id="range-1" min="0" max="100" value="12" oninput="this.nextElementSibling.value = this.value">
-                <span id="ec" style="margin-left: auto;">12</span>  <span>%</span>
+                <span id="ec" style="margin-left: auto;">12</span>  <span>&nbsp;%</span>
             </div>
 
             <div>Retirement Age</div>
 
             <div class="flex">
                 <input type="range" name="range-2" id="range-2" min="0" max="100" value="65" oninput="this.nextElementSibling.value = this.value">
-                <span id="ra" style="margin-left: auto;">65</span>  <span>%</span>
+                <span id="ra" style="margin-left: auto;">65</span>  <span>&nbsp;%</span>
             </div>
 
             <div class="flex">
                 <div>Employer Contribution</div>
-                <div style="margin-left: auto;">8.4%</div>
+                <div style="margin-left: auto;">8.4 %</div>
             </div>
 
             <div class="flex">
                 <div>Interest Rate</div>
-                <div style="margin-left: auto;">5%</div>
+                <div style="margin-left: auto;">5 %</div>
             </div>
 
         <button id="update">Update</button>
