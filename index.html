@@ -12,7 +12,7 @@
 
     </div>
 
-    <div id="main-content-1">
+    <div id="main-content-1" class="content">
 
         <div class="profile">
             <img src="./user.avif" alt="" width="50" height="50">
@@ -67,7 +67,7 @@
 
     </div>
 
-    <div id="main-content-2">
+    <div id="main-content-2" class="content">
         <div style="color: blue;" class="bold">Retirement Income</div>
         <div class="larger">Starting year 2056</div>
 
@@ -96,7 +96,7 @@
         </div>
 
         <div class="chart">
-            <canvas id="stackedChartID"></canvas> 
+            <canvas id="my_chart"></canvas> 
         </div>
 
         <div class="compare">
@@ -104,7 +104,7 @@
             <div class="bold">How do I compare to my peers?</div>
             <div class="grey">These numbers represent current goal achievment</div>
 
-            <div class="flex space">
+            <div class="flex">
 
                 <div class="filter">
                     <div>Age: Under 30</div>
@@ -124,31 +124,31 @@
 
     </div>
 
-    <div id="main-content-3">
+    <div id="main-content-3" class="content">
 
         <div class="card">
             <div class="bold" style="margin-bottom: 20px;">Retirement Strartegy</div>
 
             <div>Employee Contribution</div>
 
-            <div class="flex">
-                <input type="range" name="range-1" id="range-1" min="0" max="100" value="12" oninput="this.nextElementSibling.value = this.value">
+            <div class="flx">
+                <input type="range" name="range-1" id="range-1" min="0" max="100" value="12">
                 <span id="ec" style="margin-left: auto;">12</span>  <span>&nbsp;%</span>
             </div>
 
             <div>Retirement Age</div>
 
-            <div class="flex">
-                <input type="range" name="range-2" id="range-2" min="0" max="100" value="65" oninput="this.nextElementSibling.value = this.value">
+            <div class="flx">
+                <input type="range" name="range-2" id="range-2" min="0" max="100" value="65">
                 <span id="ra" style="margin-left: auto;">65</span>  <span>&nbsp;%</span>
             </div>
 
-            <div class="flex">
+            <div class="flx">
                 <div>Employer Contribution</div>
                 <div style="margin-left: auto;">8.4 %</div>
             </div>
 
-            <div class="flex">
+            <div class="flx">
                 <div>Interest Rate</div>
                 <div style="margin-left: auto;">5 %</div>
             </div>
@@ -169,84 +169,93 @@
 
     <script src="main.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<script>
+    const ctx = document.getElementById("my_chart").getContext("2d");
 
-    <!-- <script>
-        var myContext = document.getElementById( 
-    "stackedChartID").getContext('2d'); 
-var myChart = new Chart(myContext, { 
-    type: 'bar', 
-    data: { 
-        labels: [20,22,25,27,30,32,35,37,40,50,60,65], 
-        datasets: [{ 
-            label: 'Employer', 
-            backgroundColor: "blue", 
-            data: [17, 16, 4, 11, 8, 9,1,2,3,4,5,6,7], 
-        }, { 
-            label: 'Employee', 
-            backgroundColor: "purple", 
-            data: [14, 2, 10, 6, 12, 16,11,12,13,14,15,16,17], 
-        }, { 
-            label: 'Total Interest', 
-            backgroundColor: "skyblue", 
-            data: [2, 21, 13, 3, 24, 7,21,22,23,24,25,26,27], 
-        }], 
-    }, 
-    options: { 
-        plugins: { 
-            title: { 
-                display: true, 
-                text: 'Contribution Overtime' 
-            }, 
-        }, 
-        scales: { 
-            x: { 
-                stacked: true, 
-            }, 
-            y: { 
-                stacked: true 
-            } 
-        } 
-    } 
-}); 
-    </script> -->
-    <script>
-        var myContext = document.getElementById("stackedChartID").getContext('2d'); 
-        var myChart = new Chart(myContext, { 
-            type: 'bar', 
-            data: { 
-                labels: ["bike", "car", "scooter",  
-                    "truck", "auto", "Bus"], 
-                datasets: [{ 
-                    label: 'worst', 
-                    backgroundColor: "blue", 
-                    data: [17, 16, 4, 11, 8, 9], 
-                }, { 
-                    label: 'Okay', 
-                    backgroundColor: "green", 
-                    data: [14, 2, 10, 6, 12, 16], 
-                }, { 
-                    label: 'bad', 
-                    backgroundColor: "red", 
-                    data: [2, 21, 13, 3, 24, 7], 
-                }], 
-            }, 
-            options: { 
-                plugins: { 
-                    title: { 
-                        display: true, 
-                        text: 'Stacked Bar chart for pollution status' 
-                    }, 
-                }, 
-                scales: { 
-                    x: { 
-                        stacked: true, 
-                    }, 
-                    y: { 
-                        stacked: true 
-                    } 
-                } 
-            } 
-        }); 
-    </script>
+const data = {
+  labels: [
+  20,22,25,30,35,37,40,50,60,62
+  ],
+  datasets: [
+    {
+      label: "Employer K 71,500",
+      backgroundColor: "blue",
+
+      data: [
+        9000,
+        5000,
+        5240,
+        3520,
+        2510,
+        9000,
+        5000,
+        5240,
+        3520,
+        2510,
+      ]
+    },
+    {
+      label: "Employee K 52,500",
+      backgroundColor: "rgb(99, 99, 219)",
+      data: [
+        3000,
+        4000,
+        6000,
+        3500,
+        3600,
+        3000,
+        4000,
+        6000,
+        3500,
+        3600,
+      ]
+    },
+    {
+      label: "Total amount K 212,343",
+      backgroundColor: "rgb(49, 178, 229)",
+      data: [
+        6000,
+        7200,
+        6500,
+        4600,
+        3600,
+        6000,
+        7200,
+        6500,
+        4600,
+        3600,
+
+      ]
+    }
+  ]
+};
+
+const options = {
+  scales: {
+    yAxes: [
+        { stacked: true,
+            barPercentage:0.3, 
+        }
+    ],
+    xAxes: [
+      {
+        barPercentage:0.3,
+        stacked: true,
+        ticks: { maxRotation: 90, minRotation: 90 }
+      }
+    ]
+  }
+};
+
+const chart = new Chart(ctx, {
+  // The type of chart we want to create
+  type: "bar",
+  // The data for our dataset
+  data: data,
+  // Configuration options go here
+  options: options
+});
+</script>
+
 </body>
 </html>
